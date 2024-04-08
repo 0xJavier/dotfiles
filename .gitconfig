@@ -1,0 +1,20 @@
+[user]
+	name =
+	email =
+[alias]
+	list = config --global -l
+	s = status
+	save = !git add -A && git commit -m
+	co = checkout
+	cob = checkout -b
+	po = push origin
+	publish = !git push origin HEAD
+	force = push --force-with-lease origin
+	ll = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	onelog = log --oneline
+	lg = log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
+	br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+	del = branch -D
+	rename = branch -m
+	reset = !git reset --hard
+	undo = reset HEAD~1 --mixed
